@@ -1,10 +1,19 @@
 {
   "source": {
-    "include": [
-      "src/index.js"
-    ]
+    "include": ["src", "README.md"],
+    "includePattern": ".js$",
+    "excludePattern": "(node_modules/|docs)"
   },
+  "plugins": ["plugins/markdown"],
   "opts": {
-    "destination": "./docs/"
+    "destination": "./docs/",
+    "recurse": true,    
+    "package": "package.json",
+    "template": "./node_modules/foodoc/template"
+  },
+  "templates":{
+    "systemName": "HueColor",
+    "systemSummary":"Color library for development with Philips Hue",
+    "copyright": "@streamhue/hue-colors Copyright © 2020 The Streamhue team, @nicholainissen and @tdukart, @bjohnso5 "
   }
 }

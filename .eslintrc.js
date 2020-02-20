@@ -1,29 +1,20 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
-    jasmine: true,
+  root: true,
+  parserOptions: {
+    ecmaVersion: 2018
   },
   extends: [
-    'airbnb-base',
-    'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'standard',
+    'plugin:unicorn/recommended',
+    'plugin:jsdoc/recommended'
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
-  },
-  plugins: [
-    'import',
-  ],
-  rules: {
-    quotes: ['warn', 'single'],
-    indent: 'off',
-    'import/named': 'off',
-  },
-};
+  plugins: ['unicorn', 'jsdoc'],
+  overrides: [
+    {
+      files: ['test/**'],
+      rules: {
+        'no-unused-vars': 'off' 
+      }
+    }
+  ]
+}

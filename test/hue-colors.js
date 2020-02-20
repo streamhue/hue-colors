@@ -1,116 +1,110 @@
-import HueColors from '../src/index';
+const test = require('ava')
+const { HueColor } = require('../src')
 
-describe( 'Color creation', () => {
+/* Color creation */
+test('can create a color from an RGB spec', t => {
+  var color = HueColor.fromRgb(128, 128, 128)
+  var rgb = color.toRgb()
+  var cie = color.toCie()
 
-    it( 'can create a color from an RGB spec', () => {
+  t.is(color.red, 128)
+})
 
-        var color = HueColors.fromRgb( 128, 128, 128 );
-        var rgb = color.toRgb();
-        var cie = color.toCie();
+test('can create a color from a CIE spec', t => {
+  var color = HueColor.fromCIE(0.2, 0.3, 0.4)
+  var rgb = color.toRgb()
+  var cie = color.toCie()
 
-        expect( color.red ).toEqual( 128 );
+  t.is(color.x, 0.2)
+})
 
-    } );
+test('can create a color from a hex code', t => {
+  var color = HueColor.fromHex('#dedbef')
+  var rgb = color.toRgb()
+  var cie = color.toCie()
 
-    it( 'can create a color from a CIE spec', () => {
-        var color = HueColors.fromCIE( .2, .3, .4 );
-        var rgb = color.toRgb();
-        var cie = color.toCie();
+  t.is(color.red, 222)
+})
 
-        expect( color.x ).toEqual( .2 );
-    } );
+/* Color conversion */
 
-    it( 'can create a color from a hex code', () => {
-        var color = HueColors.fromHex( '#dedbef' );
-        var rgb = color.toRgb();
-        var cie = color.toCie();
+test('properly converts RGB to Hex', t => {
+  var color = HueColor.fromRgb(16, 64, 255)
+  var hex = color.toHex()
 
-        expect( color.red ).toEqual( 222 );
-    } );
+  t.is(hex, '1040ff')
+})
 
-} );
+test('properly converts HSB to Hex', t => {
+  var orange = HueColor.fromHsb(4000, 254, 254)
+  var hex = orange.toHex()
 
-describe( 'Color conversion', () => {
+  t.is(hex, 'fe5d00')
+})
 
-    it( 'properly converts RGB to Hex', () => {
-        var color = HueColors.fromRgb( 16, 64, 255 );
-        var hex = color.toHex();
+test('properly converts Hex to RGB', t => {
+  var color = HueColor.fromHex('ff00ff')
+  var rgb = color.toRgb()
 
-        expect( hex ).toEqual( '1040ff' );
-    } );
+  t.deepEqual(rgb, [255, 0, 255])
+})
 
-    it( 'properly converts HSB to Hex', () => {
-        var orange = HueColors.fromHsb( 4000, 254, 254 );
-        var hex = orange.toHex();
+test('properly converts RGB to HSB', t => {
+  var orange = HueColor.fromRgb(254, 93, 0)
+  var orangeHsb = orange.toHsb()
+  t.assert(orangeHsb[0] >= 3995)
+  t.assert(orangeHsb[0] <= 4005)
+  t.is(orangeHsb[1], 254)
+  t.is(orangeHsb[2], 254)
 
-        expect( hex ).toBe( 'fe5d00' );
-    } );
+  var blue = HueColor.fromRgb(0, 0, 255)
+  var blueHsb = blue.toHsb()
+  t.assert(blueHsb[0] >= 43685)
+  t.assert(blueHsb[0] <= 43695)
+  t.is(blueHsb[1], 254)
+  t.is(blueHsb[2], 254)
 
-    it( 'properly converts Hex to RGB', () => {
-        var color = HueColors.fromHex( 'ff00ff' );
-        var rgb = color.toRgb();
+  var black = HueColor.fromRgb(0, 0, 0)
+  var blackHsb = black.toHsb()
+  t.deepEqual(blackHsb, [undefined, 0, 0])
 
-        expect( rgb ).toEqual( [ 255, 0, 255 ] );
-    } );
+  var gray = HueColor.fromRgb(160, 160, 160)
+  var grayHsb = gray.toHsb()
+  t.deepEqual(grayHsb, [undefined, 0, 160])
+})
 
-    it( 'properly converts RGB to HSB', () => {
-        var orange = HueColors.fromRgb( 254, 93, 0 );
-        var orangeHsb = orange.toHsb();
-        expect( orangeHsb[ 0 ] ).toBeGreaterThanOrEqual( 3995 );
-        expect( orangeHsb[ 0 ] ).toBeLessThanOrEqual( 4005 );
-        expect( orangeHsb[ 1 ] ).toEqual( 254 );
-        expect( orangeHsb[ 2 ] ).toEqual( 254 );
+test('properly converts HSB to RGB', t => {
+  var orange = HueColor.fromHsb(4000, 254, 254)
+  var orangeRgb = orange.toRgb()
+  t.deepEqual(orangeRgb, [254, 93, 0])
 
-        var blue = HueColors.fromRgb( 0, 0, 255 );
-        var blueHsb = blue.toHsb();
-        expect( blueHsb[ 0 ] ).toBeGreaterThanOrEqual( 43685 );
-        expect( blueHsb[ 0 ] ).toBeLessThanOrEqual( 43695 );
-        expect( blueHsb[ 1 ] ).toEqual( 254 );
-        expect( blueHsb[ 2 ] ).toEqual( 254 );
+  var blue = HueColor.fromHsb(43690, 254, 254)
+  var blueRgb = blue.toRgb()
+  t.deepEqual(blueRgb, [0, 0, 254])
 
-        var black = HueColors.fromRgb( 0, 0, 0 );
-        var blackHsb = black.toHsb();
-        expect( blackHsb ).toEqual( [ undefined, 0, 0 ] );
+  var green = HueColor.fromHsb(21845, 254, 254)
+  var greenRgb = green.toRgb()
+  t.deepEqual(greenRgb, [0, 254, 0])
+})
 
-        var gray = HueColors.fromRgb( 160, 160, 160 );
-        var grayHsb = gray.toHsb();
-        expect( grayHsb ).toEqual( [ undefined, 0, 160 ] );
-    } );
+test('properly converts color temperature to RGB', t => {
+  var cool = HueColor.fromCt(153, 254)
+  var coolRgb = cool.toRgb()
+  t.deepEqual(coolRgb, [255, 255, 255])
 
-    it( 'properly converts HSB to RGB', () => {
-        var orange = HueColors.fromHsb( 4000, 254, 254 );
-        var orangeRgb = orange.toRgb();
-        expect( orangeRgb ).toEqual( [ 254, 93, 0 ] );
+  var warm = HueColor.fromCt(500, 254)
+  var warmRgb = warm.toRgb()
+  t.deepEqual(warmRgb, [255, 137, 255])
+})
 
-        var blue = HueColors.fromHsb( 43690, 254, 254 );
-        var blueRgb = blue.toRgb();
-        expect( blueRgb ).toEqual( [ 0, 0, 254 ] );
+test('refuses to convert RGB to color temperature', t => {
+  var rgbLight = HueColor.fromRgb(0, 255, 255)
+  var rgbCt = rgbLight.toCt()
+  t.is(rgbCt, undefined)
+})
 
-        var green = HueColors.fromHsb( 21845, 254, 254 );
-        var greenRgb = green.toRgb();
-        expect( greenRgb ).toEqual( [ 0, 254, 0 ] );
-    } );
-
-    it( 'properly converts color temperature to RGB', () => {
-        var cool = HueColors.fromCt( 153, 254 );
-        var coolRgb = cool.toRgb();
-        expect( coolRgb ).toEqual( [ 255, 255, 255 ] );
-
-        var warm = HueColors.fromCt( 500, 254 );
-        var warmRgb = warm.toRgb();
-        expect( warmRgb ).toEqual( [ 255, 137, 255 ] );
-    } );
-
-    it( 'refuses to convert RGB to color temperature', () => {
-        var rgbLight = HueColors.fromRgb( 0, 255, 255 );
-        var rgbCt = rgbLight.toCt();
-        expect( rgbCt ).toBeUndefined();
-    } );
-
-    it( 'allows lights defined with color temperature to return their color temperature', () => {
-        var ctLight = HueColors.fromCt( 200, 254 );
-        var ctLightCt = ctLight.toCt();
-        expect( ctLightCt ).toEqual( 200 );
-    } );
-
-} );
+test('allows lights defined with color temperature to return their color temperature', t => {
+  var ctLight = HueColor.fromCt(200, 254)
+  var ctLightCt = ctLight.toCt()
+  t.is(ctLightCt, 200)
+})
