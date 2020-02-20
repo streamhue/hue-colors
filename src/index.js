@@ -36,7 +36,7 @@ class HueColor {
    * @returns {HueColor} HueColor instance
    */
   static fromRgb (red, green, blue) {
-    const color = new HueColor()
+    const color = new this()
     color.red = red
     color.green = green
     color.blue = blue
@@ -55,7 +55,7 @@ class HueColor {
    * @returns {HueColor} HueColor instance
    */
   static fromCIE (x, y, brightness) {
-    const color = new HueColor()
+    const color = new this()
     color.x = x
     color.y = y
     color.brightness = brightness
@@ -73,7 +73,7 @@ class HueColor {
    * @memberof HueColor
    */
   static fromCt (colorTemperature, brightness) {
-    const color = new HueColor()
+    const color = new this()
     color.temperature = colorTemperature
     color.brightness = brightness
     color.originalColor = COLOR_CT
@@ -104,7 +104,7 @@ class HueColor {
    * @returns {HueColor} HueColor instance
    */
   static fromHsb (hue, saturation, brightness) {
-    const color = new HueColor()
+    const color = new this()
     color.hue = hue
     color.saturation = saturation
     color.brightness = brightness
