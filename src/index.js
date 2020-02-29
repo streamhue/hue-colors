@@ -4,25 +4,35 @@ const COLOR_RGB = 'rgb'
 const COLOR_CIE = 'cie'
 const COLOR_CT = 'ct'
 const COLOR_HSB = 'hsb'
+
 /**
- * HueColor
- *
+ * Contains color information and methods to work with them.\
+ * **Do not** construct this directly, use the static factory functions.
  */
 class HueColor {
   /**
-   * Constructs a new Color. Should usually be called by one of the static from___ methods.
+   * Creates an instance of HueColor.\
+   * Should really only be used inside it's own static methods.
+   *
+   * @param {object} options Color options.
+   * @memberof HueColor
    */
-  constructor () {
-    this.red = null
-    this.green = null
-    this.blue = null
-    this.x = null
-    this.y = null
-    this.brightness = null
-    this.hue = null
-    this.saturation = null
-    this.temperature = null
-    this.originalColor = null
+  constructor ({
+    red = null,
+    green = null,
+    blue = null,
+    x = null,
+    y = null,
+    brightness = null,
+    hue = null,
+    saturation = null,
+    temperature = null,
+    originalColor = null
+  }) {
+    if (![COLOR_CIE, COLOR_CT, COLOR_HSB, COLOR_RGB].includes(originalColor)) {
+      throw new Error('Use static factory functions to construct HueColor')
+    }
+    Object.assign(this, { red, green, blue, x, y, brightness, hue, saturation, temperature, originalColor })
   }
 
   /**
@@ -36,12 +46,7 @@ class HueColor {
    * @returns {HueColor} HueColor instance
    */
   static fromRgb (red, green, blue) {
-    const color = new this()
-    color.red = red
-    color.green = green
-    color.blue = blue
-    color.originalColor = COLOR_RGB
-    return color
+    return new this({ red, green, blue, originalColor: COLOR_RGB })
   }
 
   /**
@@ -55,29 +60,20 @@ class HueColor {
    * @returns {HueColor} HueColor instance
    */
   static fromCIE (x, y, brightness) {
-    const color = new this()
-    color.x = x
-    color.y = y
-    color.brightness = brightness
-    color.originalColor = COLOR_CIE
-    return color
+    return new this({ x, y, brightness, originalColor: COLOR_CIE })
   }
 
   /**
    * Create from Color Temperature
    *
    * @static
-   * @param {number} colorTemperature Color temperature
+   * @param {number} temperature Color temperature
    * @param {number} brightness Brightness
    * @returns {HueColor} HueColor instance
    * @memberof HueColor
    */
-  static fromCt (colorTemperature, brightness) {
-    const color = new this()
-    color.temperature = colorTemperature
-    color.brightness = brightness
-    color.originalColor = COLOR_CT
-    return color
+  static fromCt (temperature, brightness) {
+    return new this({ temperature, brightness, originalColor: COLOR_CT })
   }
 
   /**
@@ -90,7 +86,7 @@ class HueColor {
    */
   static fromHex (hex) {
     const rgb = ColorUtil.hexToRGB(hex)
-    return HueColor.fromRgb(rgb[0], rgb[1], rgb[2])
+    return this.fromRgb(rgb[0], rgb[1], rgb[2])
   }
 
   /**
@@ -104,12 +100,7 @@ class HueColor {
    * @returns {HueColor} HueColor instance
    */
   static fromHsb (hue, saturation, brightness) {
-    const color = new this()
-    color.hue = hue
-    color.saturation = saturation
-    color.brightness = brightness
-    color.originalColor = COLOR_HSB
-    return color
+    return new this({ hue, saturation, brightness, originalColor: COLOR_HSB })
   }
 
   /**
