@@ -72,7 +72,18 @@
         ],
         "HueColor.html": [
           "class",
-          "huecolor"
+          "color",
+          "construct",
+          "contain",
+          "directli",
+          "factori",
+          "function",
+          "huecolor",
+          "inform",
+          "method",
+          "static",
+          "us",
+          "work"
         ],
         "HueColor.html#.fromRgb": [
           "blue",
@@ -107,7 +118,6 @@
         "HueColor.html#.fromCt": [
           "bright",
           "color",
-          "colortemperatur",
           "creat",
           "fromct",
           "function",
@@ -234,6 +244,10 @@
                       "ref": "index.html",
                       "tf": 14
                     },
+                    "HueColor.html": {
+                      "ref": "HueColor.html",
+                      "tf": 4.545454545454546
+                    },
                     "HueColor.html#.fromRgb": {
                       "ref": "HueColor.html#.fromRgb",
                       "tf": 7.142857142857142
@@ -274,41 +288,6 @@
                       "ref": "HueColor.html#toCt",
                       "tf": 16.666666666666664
                     }
-                  },
-                  "t": {
-                    "docs": {},
-                    "e": {
-                      "docs": {},
-                      "m": {
-                        "docs": {},
-                        "p": {
-                          "docs": {},
-                          "e": {
-                            "docs": {},
-                            "r": {
-                              "docs": {},
-                              "a": {
-                                "docs": {},
-                                "t": {
-                                  "docs": {},
-                                  "u": {
-                                    "docs": {},
-                                    "r": {
-                                      "docs": {
-                                        "HueColor.html#.fromCt": {
-                                          "ref": "HueColor.html#.fromCt",
-                                          "tf": 20
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
                   }
                 }
               }
@@ -327,6 +306,10 @@
                         "docs": {},
                         "t": {
                           "docs": {
+                            "HueColor.html": {
+                              "ref": "HueColor.html",
+                              "tf": 4.545454545454546
+                            },
                             "HueColor.html#.fromRgb": {
                               "ref": "HueColor.html#.fromRgb",
                               "tf": 7.142857142857142
@@ -344,6 +327,23 @@
                               "tf": 8.333333333333332
                             }
                           }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "t": {
+                "docs": {},
+                "a": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "n": {
+                      "docs": {
+                        "HueColor.html": {
+                          "ref": "HueColor.html",
+                          "tf": 4.545454545454546
                         }
                       }
                     }
@@ -575,6 +575,32 @@
                 }
               }
             }
+          },
+          "i": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "e": {
+                "docs": {},
+                "c": {
+                  "docs": {},
+                  "t": {
+                    "docs": {},
+                    "l": {
+                      "docs": {},
+                      "i": {
+                        "docs": {
+                          "HueColor.html": {
+                            "ref": "HueColor.html",
+                            "tf": 4.545454545454546
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "h": {
@@ -612,7 +638,7 @@
                           },
                           "HueColor.html": {
                             "ref": "HueColor.html",
-                            "tf": 1950
+                            "tf": 1900
                           },
                           "HueColor.html#.fromRgb": {
                             "ref": "HueColor.html#.fromRgb",
@@ -845,6 +871,23 @@
                           "ref": "XYPoint.XYPoint.html",
                           "tf": 16.666666666666664
                         }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "f": {
+              "docs": {},
+              "o": {
+                "docs": {},
+                "r": {
+                  "docs": {},
+                  "m": {
+                    "docs": {
+                      "HueColor.html": {
+                        "ref": "HueColor.html",
+                        "tf": 4.545454545454546
                       }
                     }
                   }
@@ -1201,53 +1244,97 @@
             }
           }
         },
-        "b": {
+        "f": {
           "docs": {},
-          "l": {
+          "a": {
             "docs": {},
-            "u": {
+            "c": {
               "docs": {},
-              "e": {
-                "docs": {
-                  "HueColor.html#.fromRgb": {
-                    "ref": "HueColor.html#.fromRgb",
-                    "tf": 23.809523809523807
-                  }
-                }
-              }
-            }
-          },
-          "r": {
-            "docs": {},
-            "i": {
-              "docs": {},
-              "g": {
+              "t": {
                 "docs": {},
-                "h": {
+                "o": {
                   "docs": {},
-                  "t": {
-                    "docs": {
-                      "HueColor.html#.fromCIE": {
-                        "ref": "HueColor.html#.fromCIE",
-                        "tf": 23.809523809523807
-                      },
-                      "HueColor.html#.fromCt": {
-                        "ref": "HueColor.html#.fromCt",
-                        "tf": 20
-                      },
-                      "HueColor.html#.fromHsb": {
-                        "ref": "HueColor.html#.fromHsb",
-                        "tf": 16.666666666666664
+                  "r": {
+                    "docs": {},
+                    "i": {
+                      "docs": {
+                        "HueColor.html": {
+                          "ref": "HueColor.html",
+                          "tf": 4.545454545454546
+                        }
                       }
                     }
                   }
                 }
               }
             }
-          }
-        },
-        "f": {
-          "docs": {},
+          },
+          "u": {
+            "docs": {},
+            "n": {
+              "docs": {},
+              "c": {
+                "docs": {},
+                "t": {
+                  "docs": {},
+                  "i": {
+                    "docs": {},
+                    "o": {
+                      "docs": {},
+                      "n": {
+                        "docs": {
+                          "HueColor.html": {
+                            "ref": "HueColor.html",
+                            "tf": 4.545454545454546
+                          },
+                          "HueColor.html#.fromRgb": {
+                            "ref": "HueColor.html#.fromRgb",
+                            "tf": 110
+                          },
+                          "HueColor.html#.fromCIE": {
+                            "ref": "HueColor.html#.fromCIE",
+                            "tf": 110
+                          },
+                          "HueColor.html#.fromCt": {
+                            "ref": "HueColor.html#.fromCt",
+                            "tf": 110
+                          },
+                          "HueColor.html#.fromHex": {
+                            "ref": "HueColor.html#.fromHex",
+                            "tf": 110
+                          },
+                          "HueColor.html#.fromHsb": {
+                            "ref": "HueColor.html#.fromHsb",
+                            "tf": 110
+                          },
+                          "HueColor.html#toRgb": {
+                            "ref": "HueColor.html#toRgb",
+                            "tf": 110
+                          },
+                          "HueColor.html#toHex": {
+                            "ref": "HueColor.html#toHex",
+                            "tf": 110
+                          },
+                          "HueColor.html#toCie": {
+                            "ref": "HueColor.html#toCie",
+                            "tf": 110
+                          },
+                          "HueColor.html#toHsb": {
+                            "ref": "HueColor.html#toHsb",
+                            "tf": 110
+                          },
+                          "HueColor.html#toCt": {
+                            "ref": "HueColor.html#toCt",
+                            "tf": 110
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "r": {
             "docs": {},
             "o": {
@@ -1314,62 +1401,185 @@
                 }
               }
             }
-          },
-          "u": {
+          }
+        },
+        "m": {
+          "docs": {},
+          "e": {
             "docs": {},
-            "n": {
+            "t": {
               "docs": {},
-              "c": {
+              "h": {
                 "docs": {},
-                "t": {
+                "o": {
                   "docs": {},
-                  "i": {
-                    "docs": {},
-                    "o": {
-                      "docs": {},
-                      "n": {
-                        "docs": {
-                          "HueColor.html#.fromRgb": {
-                            "ref": "HueColor.html#.fromRgb",
-                            "tf": 110
-                          },
-                          "HueColor.html#.fromCIE": {
-                            "ref": "HueColor.html#.fromCIE",
-                            "tf": 110
-                          },
-                          "HueColor.html#.fromCt": {
-                            "ref": "HueColor.html#.fromCt",
-                            "tf": 110
-                          },
-                          "HueColor.html#.fromHex": {
-                            "ref": "HueColor.html#.fromHex",
-                            "tf": 110
-                          },
-                          "HueColor.html#.fromHsb": {
-                            "ref": "HueColor.html#.fromHsb",
-                            "tf": 110
-                          },
-                          "HueColor.html#toRgb": {
-                            "ref": "HueColor.html#toRgb",
-                            "tf": 110
-                          },
-                          "HueColor.html#toHex": {
-                            "ref": "HueColor.html#toHex",
-                            "tf": 110
-                          },
-                          "HueColor.html#toCie": {
-                            "ref": "HueColor.html#toCie",
-                            "tf": 110
-                          },
-                          "HueColor.html#toHsb": {
-                            "ref": "HueColor.html#toHsb",
-                            "tf": 110
-                          },
-                          "HueColor.html#toCt": {
-                            "ref": "HueColor.html#toCt",
-                            "tf": 110
-                          }
-                        }
+                  "d": {
+                    "docs": {
+                      "HueColor.html": {
+                        "ref": "HueColor.html",
+                        "tf": 4.545454545454546
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "docs": {},
+          "t": {
+            "docs": {},
+            "a": {
+              "docs": {},
+              "t": {
+                "docs": {},
+                "i": {
+                  "docs": {},
+                  "c": {
+                    "docs": {
+                      "HueColor.html": {
+                        "ref": "HueColor.html",
+                        "tf": 4.545454545454546
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "y": {
+              "docs": {},
+              "l": {
+                "docs": {},
+                "e": {
+                  "docs": {
+                    "HueColor.html#.fromHex": {
+                      "ref": "HueColor.html#.fromHex",
+                      "tf": 6.25
+                    },
+                    "HueColor.html#toHex": {
+                      "ref": "HueColor.html#toHex",
+                      "tf": 4.166666666666666
+                    }
+                  }
+                }
+              }
+            },
+            "r": {
+              "docs": {},
+              "i": {
+                "docs": {},
+                "n": {
+                  "docs": {},
+                  "g": {
+                    "docs": {
+                      "HueColor.html#toHex": {
+                        "ref": "HueColor.html#toHex",
+                        "tf": 54.166666666666664
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "docs": {},
+            "t": {
+              "docs": {},
+              "u": {
+                "docs": {},
+                "r": {
+                  "docs": {
+                    "HueColor.html#.fromHsb": {
+                      "ref": "HueColor.html#.fromHsb",
+                      "tf": 16.666666666666664
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "docs": {},
+            "o": {
+              "docs": {},
+              "w": {
+                "docs": {
+                  "HueColor.html#toCie": {
+                    "ref": "HueColor.html#toCie",
+                    "tf": 3.571428571428571
+                  }
+                }
+              }
+            }
+          }
+        },
+        "u": {
+          "docs": {},
+          "s": {
+            "docs": {
+              "HueColor.html": {
+                "ref": "HueColor.html",
+                "tf": 4.545454545454546
+              }
+            }
+          }
+        },
+        "w": {
+          "docs": {},
+          "o": {
+            "docs": {},
+            "r": {
+              "docs": {},
+              "k": {
+                "docs": {
+                  "HueColor.html": {
+                    "ref": "HueColor.html",
+                    "tf": 4.545454545454546
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "docs": {},
+          "l": {
+            "docs": {},
+            "u": {
+              "docs": {},
+              "e": {
+                "docs": {
+                  "HueColor.html#.fromRgb": {
+                    "ref": "HueColor.html#.fromRgb",
+                    "tf": 23.809523809523807
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "docs": {},
+            "i": {
+              "docs": {},
+              "g": {
+                "docs": {},
+                "h": {
+                  "docs": {},
+                  "t": {
+                    "docs": {
+                      "HueColor.html#.fromCIE": {
+                        "ref": "HueColor.html#.fromCIE",
+                        "tf": 23.809523809523807
+                      },
+                      "HueColor.html#.fromCt": {
+                        "ref": "HueColor.html#.fromCt",
+                        "tf": 20
+                      },
+                      "HueColor.html#.fromHsb": {
+                        "ref": "HueColor.html#.fromHsb",
+                        "tf": 16.666666666666664
                       }
                     }
                   }
@@ -1516,7 +1726,7 @@
                             "docs": {
                               "HueColor.html#.fromCt": {
                                 "ref": "HueColor.html#.fromCt",
-                                "tf": 16.666666666666664
+                                "tf": 36.666666666666664
                               },
                               "HueColor.html#toCt": {
                                 "ref": "HueColor.html#toCt",
@@ -1588,78 +1798,6 @@
                   "HueColor.html#toCt": {
                     "ref": "HueColor.html#toCt",
                     "tf": 700
-                  }
-                }
-              }
-            }
-          }
-        },
-        "s": {
-          "docs": {},
-          "t": {
-            "docs": {},
-            "y": {
-              "docs": {},
-              "l": {
-                "docs": {},
-                "e": {
-                  "docs": {
-                    "HueColor.html#.fromHex": {
-                      "ref": "HueColor.html#.fromHex",
-                      "tf": 6.25
-                    },
-                    "HueColor.html#toHex": {
-                      "ref": "HueColor.html#toHex",
-                      "tf": 4.166666666666666
-                    }
-                  }
-                }
-              }
-            },
-            "r": {
-              "docs": {},
-              "i": {
-                "docs": {},
-                "n": {
-                  "docs": {},
-                  "g": {
-                    "docs": {
-                      "HueColor.html#toHex": {
-                        "ref": "HueColor.html#toHex",
-                        "tf": 54.166666666666664
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "a": {
-            "docs": {},
-            "t": {
-              "docs": {},
-              "u": {
-                "docs": {},
-                "r": {
-                  "docs": {
-                    "HueColor.html#.fromHsb": {
-                      "ref": "HueColor.html#.fromHsb",
-                      "tf": 16.666666666666664
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "h": {
-            "docs": {},
-            "o": {
-              "docs": {},
-              "w": {
-                "docs": {
-                  "HueColor.html#toCie": {
-                    "ref": "HueColor.html#toCie",
-                    "tf": 3.571428571428571
                   }
                 }
               }
@@ -1788,7 +1926,7 @@
           }
         }
       },
-      "length": 143
+      "length": 153
     },
     "corpusTokens": [
       "approxim",
@@ -1800,14 +1938,16 @@
       "class",
       "code",
       "color",
-      "colortemperatur",
       "construct",
+      "contain",
       "convers",
       "convert",
       "creat",
       "css",
       "develop",
+      "directli",
       "document",
+      "factori",
       "fromci",
       "fromct",
       "fromhex",
@@ -1832,12 +1972,14 @@
       "huecolor.fromhsb",
       "huecolor.fromrgb",
       "index",
+      "inform",
       "instanc",
       "lamp",
       "librari",
       "list",
       "list:class",
       "lt;static&gt",
+      "method",
       "necessarili",
       "new",
       "note",
@@ -1849,6 +1991,7 @@
       "rgb",
       "satur",
       "show",
+      "static",
       "string",
       "style",
       "temperatur",
@@ -1857,7 +2000,9 @@
       "tohex",
       "tohsb",
       "torgb",
+      "us",
       "valu",
+      "work",
       "x",
       "xypoint",
       "xypoint.xypoint",
@@ -1933,7 +2078,7 @@
       "name": "HueColor",
       "tags": "HueColor",
       "summary": "",
-      "description": "HueColor",
+      "description": "Contains color information and methods to work with them. Do not construct this directly, use the static factory functions.",
       "body": ""
     },
     "HueColor.html#.fromRgb": {
@@ -1959,7 +2104,7 @@
     "HueColor.html#.fromCt": {
       "id": "HueColor.html#.fromCt",
       "kind": "function",
-      "title": "&lt;static&gt; fromCt( colorTemperature, brightness ) → {HueColor}",
+      "title": "&lt;static&gt; fromCt( temperature, brightness ) → {HueColor}",
       "longname": "HueColor.fromCt",
       "name": "fromCt",
       "tags": "HueColor.fromCt fromCt",
