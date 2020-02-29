@@ -29,7 +29,7 @@
     "eslint-plugin-unicorn": "^15.0.1",
     "esm": "^3.2.25",
     "jsdoc": "^3.6.3",
-    "np": "^6.1.0",
+    "np": "^6.2.0",
     "rimraf": "^3.0.2"
   },
   "directories": {
